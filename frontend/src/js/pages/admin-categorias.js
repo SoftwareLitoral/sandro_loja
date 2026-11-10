@@ -67,5 +67,11 @@ form.addEventListener('submit', async (evento) => {
   }
 });
 
-await mountLayout();
-await carregarCategorias();
+async function iniciarPagina() {
+  await mountLayout();
+  await carregarCategorias();
+}
+
+iniciarPagina().catch((erro) => {
+  console.error('Erro ao iniciar a página de categorias:', erro);
+});

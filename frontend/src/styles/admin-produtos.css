@@ -388,7 +388,7 @@ body.admin-products-page {
   text-align: center;
 }
 
-/* Acessibilidade: foco pelo teclado */
+/* Acessibilidade */
 
 .admin-products-page .admin-btn:focus-visible,
 .admin-products-page .admin-table-action:focus-visible {
