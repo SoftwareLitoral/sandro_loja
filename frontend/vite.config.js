@@ -3,7 +3,8 @@ import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 import { resolve } from 'node:path';
 
-const API_TARGET = process.env.VITE_API_TARGET || 'http://localhost:3333';
+const API_TARGET =
+  process.env.VITE_API_TARGET || 'http://localhost:3333';
 
 export default defineConfig({
   plugins: [tailwindcss()],
@@ -32,11 +33,16 @@ export default defineConfig({
   },
 
   build: {
-    arget: 'es2022',
+    target: 'es2022',
     outDir: 'dist',
+    emptyOutDir: true,
+
     rollupOptions: {
       input: {
-        adminCategorias: resolve(process.cwd(),'src/pages/admin-categorias.html'),
+        adminCategorias: resolve(
+          process.cwd(),
+          'src/pages/admin-categorias.html'
+        ),
         index: resolve(process.cwd(), 'index.html'),
         produtos: resolve(process.cwd(), 'src/pages/produtos.html'),
         produto: resolve(process.cwd(), 'src/pages/produto.html'),
