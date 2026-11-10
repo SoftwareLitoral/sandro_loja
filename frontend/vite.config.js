@@ -13,6 +13,11 @@ export default defineConfig({
     port: 3000,
     host: true,
     strictPort: true,
+
+    allowedHosts: [
+      'sandro-loja-2.onrender.com',
+    ],
+
     proxy: {
       '/api': {
         target: API_TARGET,
@@ -24,6 +29,7 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true,
+
     proxy: {
       '/api': {
         target: API_TARGET,
