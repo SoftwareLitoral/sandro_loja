@@ -32,6 +32,7 @@ export default defineConfig({
   },
 
   build: {
+    arget: 'es2022',
     outDir: 'dist',
     rollupOptions: {
       input: {
